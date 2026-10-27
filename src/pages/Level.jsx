@@ -25,7 +25,7 @@ function LevelView({ level }) {
           <h1>{info.label}</h1>
           <p className="lede">{info.goal}</p>
           <p className="muted small">
-            Đủ {count} từ mới của cấp này theo danh sách HSK 2.0. Cộng với các cấp dưới, bạn tích lũy {info.words} từ.
+            Danh sách hiện có {count} mục từ mới được gắn với cấp này. Mốc tích lũy tham khảo của HSK 2.0 là {info.words} từ.
             Từ được nhóm theo từ loại; bấm vào thẻ để nghe phát âm.
           </p>
         </div>
@@ -44,7 +44,7 @@ function LevelView({ level }) {
         onChange={setTab}
         id="level-tabs"
       />
-      {tab === 'vocab' ? <Vocab topics={topics} level={level} /> : <Grammar points={grammar[level]} />}
+      {tab === 'vocab' ? <Vocab topics={topics} level={level} /> : <Grammar points={grammar[level]} level={level} />}
       <nav className="pager" aria-label="Chuyển cấp">
         {level > 1 ? <Link to={`/hsk/${level - 1}`} className="btn ghost">← HSK {level - 1}</Link> : <span />}
         {level < 6 && <Link to={`/hsk/${level + 1}`} className="btn ghost">HSK {level + 1} →</Link>}
@@ -135,9 +135,14 @@ function Vocab({ topics, level }) {
   )
 }
 
-function Grammar({ points }) {
+function Grammar({ points, level }) {
   return (
     <div className="grammar-list">
+      {level === 3 && (
+        <p className="grammar-intro">
+          HSK 2.0 · HSK 3 có {points.length} trọng điểm ngữ pháp. Mỗi thẻ trình bày công thức, cách dùng và mẫu câu khẳng định, phủ định, nghi vấn.
+        </p>
+      )}
       {points.map((g, i) => (
         <article key={g.title} className="gram">
           <header>
@@ -146,6 +151,13 @@ function Grammar({ points }) {
           </header>
           <p className="gram-pattern hz-mix">{g.pattern}</p>
           <p>{g.note}</p>
+          {g.forms && (
+            <div className="gram-forms" aria-label="Cấu trúc khẳng định, phủ định và nghi vấn">
+              <div><strong>Khẳng định</strong><span className="hz">{g.forms.affirmative}</span></div>
+              <div><strong>Phủ định</strong><span className="hz">{g.forms.negative}</span></div>
+              <div><strong>Nghi vấn</strong><span className="hz">{g.forms.question}</span></div>
+            </div>
+          )}
           <ul className="examples">
             {g.ex.map(([zh, py, vi]) => (
               <li key={zh}>
