@@ -29,6 +29,7 @@ export default function Quiz() {
   const level = Math.min(6, Math.max(1, Number(params.get('level')) || 1))
   const [listen, setListen] = useStored('quizListen', true)
   const [best, setBest] = useStored('quiz', {})
+  const [, setHistory] = useStored('history', [])
   const [seed, setSeed] = useState(0)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const quiz = useMemo(() => buildQuiz(level, listen), [level, listen, seed])
@@ -61,6 +62,7 @@ export default function Quiz() {
     if (i === N - 1) {
       const final = score + (ok ? 1 : 0)
       setBest((b) => ({ ...b, [level]: Math.max(b[level] ?? 0, final) }))
+      setHistory((h) => [{ t: Date.now(), level, score: final, total: N }, ...h].slice(0, 100))
     }
   }
 
@@ -75,7 +77,7 @@ export default function Quiz() {
       <header className="page-head">
         <p className="eyebrow">Ôn luyện</p>
         <h1>Kiểm tra</h1>
-        <p className="lede">Mỗi lượt 10 câu trộn bốn dạng: nghĩa, chữ Hán, pinyin và nghe. Điểm cao nhất của từng cấp hiện trên trang Lộ trình.</p>
+        <p className="lede">Mỗi lượt 10 câu trộn bốn dạng: nghĩa, chữ Hán, pinyin và nghe. Điểm cao nhất của từng cấp hiện trên trang Tiến độ.</p>
         <VoiceNotice />
       </header>
 

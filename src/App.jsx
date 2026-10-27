@@ -6,6 +6,7 @@ import Hanzi from './pages/Hanzi'
 import Level from './pages/Level'
 import Flashcards from './pages/Flashcards'
 import Quiz from './pages/Quiz'
+import Progress from './pages/Progress'
 // Trang Dịch kèm từ điển pinyin khá nặng nên chỉ tải khi mở trang
 const Translate = lazy(() => import('./pages/Translate'))
 import { ThemeToggle, ContactButton } from './components/ui'
@@ -19,6 +20,7 @@ const levels = [1, 2, 3, 4, 5, 6]
 const practice = [
   { to: '/flashcard', label: 'Flashcard', hz: '卡' },
   { to: '/kiem-tra', label: 'Kiểm tra', hz: '考' },
+  { to: '/tien-do', label: 'Tiến độ', hz: '进' },
 ]
 const tools = [{ to: '/dich', label: 'Dịch Trung ↔ Việt', hz: '译' }]
 
@@ -177,6 +179,7 @@ export default function App() {
             <Route path="/hsk/:level" element={<Level />} />
             <Route path="/flashcard" element={<Flashcards />} />
             <Route path="/kiem-tra" element={<Quiz />} />
+            <Route path="/tien-do" element={<Progress />} />
             <Route path="/dich" element={<Suspense fallback={<p className="muted">Đang tải công cụ dịch…</p>}><Translate /></Suspense>} />
             <Route path="*" element={<Home />} />
           </Routes>

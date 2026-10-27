@@ -699,3 +699,12 @@ h1 { letter-spacing: -.025em; }
 .contact-fab { border-radius: 999px; box-shadow: var(--shadow-m); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Trang Tiến độ */
+.prog-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.prog-summary .panel { margin: 0; text-align: center; }
+.prog-num { font-size: 2rem; font-weight: 700; color: var(--jade); margin: 0; line-height: 1.1; }
+.prog-list, .prog-hist { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 14px; }
+.prog-hist { gap: 6px; }
+.prog-head { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.prog-hist li { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
