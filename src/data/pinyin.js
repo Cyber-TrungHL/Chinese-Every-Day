@@ -2,37 +2,37 @@
 
 export const initials = [
   { group: 'Âm môi', items: [
-    { py: 'b', ex: '爸', exPy: 'bà', tip: 'Giống "p" trong "sport": không bật hơi.' },
+    { py: 'b', ex: '爸', exPy: 'bà', tip: 'Âm môi không bật hơi [p], không rung thanh quản. Không giống "b" tiếng Việt (có rung). Gần "p" trong "sport" của tiếng Anh.' },
     { py: 'p', ex: '怕', exPy: 'pà', tip: '"p" bật hơi mạnh, để tay trước miệng thấy luồng hơi.' },
     { py: 'm', ex: '妈', exPy: 'mā', tip: 'Như "m" tiếng Việt.' },
     { py: 'f', ex: '发', exPy: 'fā', tip: 'Như "ph" tiếng Việt.' },
   ]},
   { group: 'Âm đầu lưỡi', items: [
-    { py: 'd', ex: '大', exPy: 'dà', tip: 'Như "t" tiếng Việt, không bật hơi.' },
+    { py: 'd', ex: '大', exPy: 'dà', tip: 'Âm đầu lưỡi không bật hơi [t], gần "t" tiếng Việt. Không phải "đ" (âm hữu thanh).' },
     { py: 't', ex: '他', exPy: 'tā', tip: 'Như "th" tiếng Việt, bật hơi.' },
     { py: 'n', ex: '你', exPy: 'nǐ', tip: 'Như "n" tiếng Việt.' },
     { py: 'l', ex: '来', exPy: 'lái', tip: 'Như "l" tiếng Việt.' },
   ]},
   { group: 'Âm cuống lưỡi', items: [
-    { py: 'g', ex: '哥', exPy: 'gē', tip: 'Như "c/k" tiếng Việt, không bật hơi.' },
+    { py: 'g', ex: '哥', exPy: 'gē', tip: 'Âm cuống lưỡi không bật hơi [k], gần "c/k" tiếng Việt. Không rung thanh quản.' },
     { py: 'k', ex: '看', exPy: 'kàn', tip: 'Như "k" nhưng bật hơi mạnh.' },
-    { py: 'h', ex: '好', exPy: 'hǎo', tip: 'Giữa "h" và "kh" tiếng Việt, xát ở cuống lưỡi.' },
+    { py: 'h', ex: '好', exPy: 'hǎo', tip: 'Âm xát cuống lưỡi [x], gần "kh" tiếng Việt nhưng nhẹ hơn; không phải "h" thanh hầu.' },
   ]},
   { group: 'Âm mặt lưỡi', items: [
-    { py: 'j', ex: '鸡', exPy: 'jī', tip: 'Gần "ch" tiếng Việt, mặt lưỡi áp vào ngạc cứng, không bật hơi.' },
+    { py: 'j', ex: '鸡', exPy: 'jī', tip: 'Âm mặt lưỡi không bật hơi [tɕ]: mặt lưỡi áp ngạc cứng, môi dẹt. Chỉ gần "ch" tiếng Việt, không giống hẳn.' },
     { py: 'q', ex: '七', exPy: 'qī', tip: 'Như j nhưng bật hơi.' },
-    { py: 'x', ex: '西', exPy: 'xī', tip: 'Gần "x" tiếng Việt, lưỡi phẳng và môi dẹt.' },
+    { py: 'x', ex: '西', exPy: 'xī', tip: 'Âm xát mặt lưỡi [ɕ]: mặt lưỡi gần ngạc cứng, môi dẹt. Không giống "x" tiếng Việt [s].' },
   ]},
   { group: 'Âm uốn lưỡi', items: [
-    { py: 'zh', ex: '中', exPy: 'zhōng', tip: 'Gần "tr" tiếng Việt, cong đầu lưỡi lên, không bật hơi.' },
+    { py: 'zh', ex: '中', exPy: 'zhōng', tip: 'Âm uốn lưỡi không bật hơi [ʈʂ]: cong đầu lưỡi lên ngạc cứng. Gần "tr" (giọng miền Nam), không giống hẳn.' },
     { py: 'ch', ex: '吃', exPy: 'chī', tip: 'Như zh nhưng bật hơi.' },
-    { py: 'sh', ex: '是', exPy: 'shì', tip: 'Gần "s" (miền Bắc phát âm uốn lưỡi), cong đầu lưỡi.' },
-    { py: 'r', ex: '热', exPy: 'rè', tip: 'Đầu lưỡi cong như sh nhưng rung dây thanh, gần "r" nhẹ.' },
+    { py: 'sh', ex: '是', exPy: 'shì', tip: 'Âm xát uốn lưỡi [ʂ]: cong đầu lưỡi lên. Gần "s" giọng miền Nam; "s" giọng miền Bắc là [s], không dùng được cho âm này.' },
+    { py: 'r', ex: '热', exPy: 'rè', tip: 'Âm xát uốn lưỡi có rung thanh quản [ʐ]: tư thế lưỡi như sh. Không phải "r" rung đầu lưỡi.' },
   ]},
   { group: 'Âm đầu lưỡi trước', items: [
-    { py: 'z', ex: '字', exPy: 'zì', tip: 'Như "ts" không bật hơi, đầu lưỡi chạm chân răng trên.' },
+    { py: 'z', ex: '字', exPy: 'zì', tip: 'Âm tắc xát không bật hơi [ts]: đầu lưỡi chạm chân răng trên.' },
     { py: 'c', ex: '菜', exPy: 'cài', tip: 'Như "ts" bật hơi mạnh.' },
-    { py: 's', ex: '四', exPy: 'sì', tip: 'Như "x" tiếng Việt.' },
+    { py: 's', ex: '四', exPy: 'sì', tip: 'Âm xát đầu lưỡi [s], gần "x" tiếng Việt.' },
   ]},
   { group: 'Bán nguyên âm', items: [
     { py: 'y', ex: '一', exPy: 'yī', tip: 'Viết thay cho i khi i đứng đầu âm tiết.' },
@@ -44,7 +44,7 @@ export const finals = [
   { group: 'Vận mẫu đơn', items: [
     ['a', '八', 'bā', 'Như "a", mở rộng miệng.'],
     ['o', '波', 'bō', 'Như "ô" hơi chuyển về "ua".'],
-    ['e', '饿', 'è', 'Gần "ưa", không tròn môi.'],
+    ['e', '饿', 'è', 'Âm [ɤ]: miệng hé, môi không tròn, lưỡi lùi về sau. Nghe gần "ơ" hoặc "ưa", không giống hẳn.'],
     ['i', '一', 'yī', 'Như "i".'],
     ['u', '五', 'wǔ', 'Như "u", tròn môi.'],
     ['ü', '鱼', 'yú', 'Môi tròn như "u" nhưng lưỡi đặt như "i". Không có trong tiếng Việt.'],
@@ -91,10 +91,10 @@ export const finals = [
 
 // Chao tone letters: 5 = cao nhất, 1 = thấp nhất
 export const tones = [
-  { n: 1, name: 'Thanh 1', mark: 'ā', contour: [5, 5], code: '55', hz: '妈', py: 'mā', vi: 'mẹ', desc: 'Cao và bằng, giữ nguyên độ cao. Gần thanh ngang nhưng cao hơn.' },
-  { n: 2, name: 'Thanh 2', mark: 'á', contour: [3, 5], code: '35', hz: '麻', py: 'má', vi: 'cây gai; tê', desc: 'Đi lên từ giữa đến cao. Gần thanh sắc.' },
-  { n: 3, name: 'Thanh 3', mark: 'ǎ', contour: [2, 1, 4], code: '214', hz: '马', py: 'mǎ', vi: 'con ngựa', desc: 'Xuống thấp rồi lên. Gần thanh hỏi. Trong lời nói thường chỉ đọc nửa đầu (21).' },
-  { n: 4, name: 'Thanh 4', mark: 'à', contour: [5, 1], code: '51', hz: '骂', py: 'mà', vi: 'mắng', desc: 'Rơi mạnh từ cao xuống thấp, dứt khoát. Gần thanh huyền nhưng bắt đầu cao hơn.' },
+  { n: 1, name: 'Thanh 1', mark: 'ā', contour: [5, 5], code: '55', hz: '妈', py: 'mā', vi: 'mẹ', desc: 'Cao và bằng, giữ nguyên độ cao. So sánh gần đúng: thanh ngang tiếng Việt nhưng đọc cao hơn.' },
+  { n: 2, name: 'Thanh 2', mark: 'á', contour: [3, 5], code: '35', hz: '麻', py: 'má', vi: 'cây gai; tê', desc: 'Đi lên từ giữa đến cao. So sánh gần đúng: thanh sắc.' },
+  { n: 3, name: 'Thanh 3', mark: 'ǎ', contour: [2, 1, 4], code: '214', hz: '马', py: 'mǎ', vi: 'con ngựa', desc: 'Xuống thấp rồi lên. So sánh gần đúng: thanh hỏi (không trùng khớp). Trong lời nói thường chỉ đọc nửa đầu (21).' },
+  { n: 4, name: 'Thanh 4', mark: 'à', contour: [5, 1], code: '51', hz: '骂', py: 'mà', vi: 'mắng', desc: 'Rơi mạnh từ cao xuống thấp, dứt khoát. So sánh gần đúng: thanh huyền nhưng bắt đầu cao hơn nhiều.' },
   { n: 5, name: 'Thanh nhẹ', mark: 'a', contour: [3, 3], code: '—', hz: '吗', py: 'ma', vi: 'trợ từ nghi vấn', desc: 'Đọc nhẹ và ngắn, không đánh dấu. Độ cao phụ thuộc âm tiết đứng trước.' },
 ]
 

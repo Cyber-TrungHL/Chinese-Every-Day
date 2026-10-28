@@ -156,7 +156,7 @@ function MobileNav() {
           <div className="drawer-foot">
             <p className="nav-head">Giao diện</p>
             <ThemeToggle />
-            <p className="drawer-note">4991 từ HSK 2.0 · phát âm bằng giọng đọc của trình duyệt</p>
+            <p className="drawer-note">Từ vựng hệ HSK 2.0 · phát âm bằng giọng đọc của trình duyệt</p>
           </div>
         </aside>
       </div>
@@ -184,7 +184,7 @@ export default function App() {
             <Route path="*" element={<Home />} />
           </Routes>
           <footer className="foot">
-            Từ vựng theo chuẩn HSK 2.0 (6 cấp). Phát âm dùng giọng đọc có sẵn của trình duyệt. Tiến độ được lưu trên trình duyệt này.
+            Từ vựng theo hệ HSK 2.0 cũ (6 cấp). Đề cương HSK mới (công bố 11/2025, áp dụng từ 07/2026) có danh sách từ khác, chưa được đối chiếu hết trong dữ liệu này. Phát âm dùng giọng đọc có sẵn của trình duyệt. Tiến độ được lưu trên trình duyệt này.
           </footer>
         </main>
         <ContactButton />

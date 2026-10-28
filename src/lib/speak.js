@@ -1,4 +1,5 @@
-// Phát âm bằng Web Speech API của trình duyệt (giọng zh-CN nếu máy có)
+// Phát âm bằng Web Speech API của trình duyệt (giọng zh-CN nếu máy có).
+// Đây là giọng tổng hợp của thiết bị, chưa phải bản ghi âm chuẩn đã kiểm định.
 let cachedVoice = null
 
 function pickVoice() {
@@ -31,6 +32,10 @@ export function speak(text, rate = 0.8) {
   if (!canSpeak()) return false
   try {
     window.speechSynthesis.cancel()
+    // Không đọc bằng giọng không phải tiếng Trung (tránh phát âm sai):
+    // nếu máy đã nạp danh sách giọng mà không có giọng zh thì không phát.
+    const all = window.speechSynthesis.getVoices()
+    if (all.length > 0 && !pickVoice()) return false
     const u = new SpeechSynthesisUtterance(text)
     u.lang = 'zh-CN'
     u.rate = rate
